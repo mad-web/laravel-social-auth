@@ -242,7 +242,7 @@ For example
 ```php
 Route::get('social/{social}', 'Auth\SocialAuthController@getAccount');
 Route::get('social/{social}/callback', 'Auth\SocialAuthController@callback');
-Route::get('social/{social}/detach', 'SocialAuthController@deleteAccount');
+Route::get('social/{social}/detach', 'Auth\SocialAuthController@detachAccount');
 ```
 
 In case if you no need any special functionality ypu can use our default controllers
