@@ -214,14 +214,17 @@ class SocialAuthController extends BaseController
             return redirect($redirect_path);
         }
 
-        //Checks if account exists with socialProvider email, auth and attach current socialProvider if does
-        $ExistUser = $this->userModel->where($this->userModel->getEmailField(), $socialUser->getEmail())->first();
-        if ($ExistUser) {
-            $this->login($ExistUser);
+        //Checks if socialProvider email exists
+        if ($socialUser->getEmail()) {
+            //Checks if account exists with socialProvider email, auth and attach current socialProvider if does
+            $ExistUser = $this->userModel->where($this->userModel->getEmailField(), $socialUser->getEmail())->first();
+            if ($ExistUser) {
+                $this->login($ExistUser);
 
-            $this->manager->attach($request->user(), $socialUser);
+                $this->manager->attach($request->user(), $socialUser);
 
-            return redirect($redirect_path);
+                return redirect($redirect_path);
+            }
         }
 
         //If account for current socialProvider data doesn't exist - create new one
