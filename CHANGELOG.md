@@ -4,6 +4,12 @@ All Notable changes to `laravel-social-auth` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 4.0.0 - 2020-12-19
+
+- PHP 8 support
+- Dropped older PHP versions support
+- Migrated to GitHub Actions
+
 ## 3.2.0 - 2020-12-09
 
 Upgraded socialiteproviders/manager to 4.x version
