@@ -25,10 +25,10 @@ use MadWeb\SocialAuth\SocialProviderManager;
  */
 class SocialAuthController extends BaseController
 {
-    use AuthorizesRequests,
-        DispatchesJobs,
-        ValidatesRequests,
-        RedirectsUsers;
+    use AuthorizesRequests;
+    use DispatchesJobs;
+    use ValidatesRequests;
+    use RedirectsUsers;
 
     /**
      * Redirect path.
@@ -70,7 +70,7 @@ class SocialAuthController extends BaseController
         $this->redirectTo = config('social-auth.redirect');
 
         $className = config('social-auth.models.user');
-        $this->userModel = new $className;
+        $this->userModel = new $className();
 
         $this->middleware(function ($request, $next) {
             $this->manager = new SocialProviderManager($request->route('social'));
