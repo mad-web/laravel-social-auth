@@ -12,7 +12,8 @@ use MadWeb\SocialAuth\Traits\UserSocialite;
 
 class User extends Model implements AuthorizableContract, AuthenticatableContract, SocialAuthenticatable
 {
-    use Authorizable, Authenticatable;
+    use Authorizable;
+    use Authenticatable;
     use UserSocialite;
     public $timestamps = false;
     /**

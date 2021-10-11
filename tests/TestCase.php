@@ -94,7 +94,7 @@ abstract class TestCase extends OrchestraTestCase
     protected function disableExceptionHandling()
     {
         if (! method_exists($this, 'withoutExceptionHandling')) {
-            $this->app->instance(ExceptionHandler::class, new TestExceptionHandler);
+            $this->app->instance(ExceptionHandler::class, new TestExceptionHandler());
 
             return;
         }
