@@ -2,10 +2,10 @@
 
 namespace MadWeb\SocialAuth;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use MadWeb\SocialAuth\Console\AddSocialProviderCommand;
 use MadWeb\SocialAuth\Console\CacheRefreshCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class SocialAuthServiceProvider extends PackageServiceProvider
 {
