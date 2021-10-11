@@ -24,9 +24,10 @@ class SocialUserAttached extends SocialEvent
 
     /**
      * SocialUserAuthenticated constructor.
-     * @param Authenticatable $user
+     *
+     * @param  Authenticatable  $user
      * @param $social
-     * @param SocialUser $socialUser
+     * @param  SocialUser  $socialUser
      */
     public function __construct(Authenticatable $user, $social, SocialUser $socialUser)
     {

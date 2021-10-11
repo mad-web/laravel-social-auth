@@ -60,8 +60,8 @@ class SocialAuthController extends BaseController
     /**
      * SocialAuthController constructor. Register Guard contract dependency.
      *
-     * @param Guard $auth
-     * @param Socialite $socialite
+     * @param  Guard  $auth
+     * @param  Socialite  $socialite
      */
     public function __construct(Guard $auth, Socialite $socialite)
     {
@@ -83,7 +83,7 @@ class SocialAuthController extends BaseController
      * If there is no response from the social network, redirect the user to the social auth page
      * else make create with information from social network.
      *
-     * @param SocialProvider $social bound by "Route model binding" feature
+     * @param  SocialProvider  $social  bound by "Route model binding" feature
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function getAccount(SocialProvider $social)
@@ -100,9 +100,10 @@ class SocialAuthController extends BaseController
     /**
      * Redirect callback for social network.
      *
-     * @param Request $request
-     * @param SocialProvider $social
+     * @param  Request  $request
+     * @param  SocialProvider  $social
      * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     *
      * @throws SocialGetUserInfoException
      * @throws SocialUserAttachException
      */
@@ -161,9 +162,10 @@ class SocialAuthController extends BaseController
     /**
      * Detaches social account for user.
      *
-     * @param Request $request
-     * @param SocialProvider $social
+     * @param  Request  $request
+     * @param  SocialProvider  $social
      * @return array
+     *
      * @throws SocialUserAttachException
      */
     public function detachAccount(Request $request, SocialProvider $social)
@@ -196,9 +198,9 @@ class SocialAuthController extends BaseController
     /**
      * Process user using data from social network.
      *
-     * @param Request $request
-     * @param SocialProvider $social
-     * @param SocialUser $socialUser
+     * @param  Request  $request
+     * @param  SocialProvider  $social
+     * @param  SocialUser  $socialUser
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     protected function processData(Request $request, SocialProvider $social, SocialUser $socialUser)
@@ -237,7 +239,7 @@ class SocialAuthController extends BaseController
     /**
      * Login user.
      *
-     * @param Authenticatable $user
+     * @param  Authenticatable  $user
      */
     protected function login(Authenticatable $user)
     {

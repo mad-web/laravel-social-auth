@@ -29,8 +29,9 @@ class SocialProvidersLoader
 
     /**
      * SocialProvidersLoader constructor.
-     * @param Repository $cache
-     * @param Dispatcher $dispatcher
+     *
+     * @param  Repository  $cache
+     * @param  Dispatcher  $dispatcher
      */
     public function __construct(Repository $cache, Dispatcher $dispatcher)
     {

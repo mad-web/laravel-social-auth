@@ -23,9 +23,10 @@ class SocialUserDetached extends SocialEvent
 
     /**
      * SocialUserAuthenticated constructor.
-     * @param SocialAuthenticatable $user
+     *
+     * @param  SocialAuthenticatable  $user
      * @param $social
-     * @param bool $isSuccess
+     * @param  bool  $isSuccess
      */
     public function __construct(SocialAuthenticatable $user, $social, bool $isSuccess)
     {

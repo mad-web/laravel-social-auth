@@ -14,10 +14,11 @@ class SocialGetUserInfoException extends Exception
 
     /**
      * SocialUserAttachException constructor.
-     * @param Model $social
-     * @param string $message
-     * @param int $code
-     * @param Exception|null $previous
+     *
+     * @param  Model  $social
+     * @param  string  $message
+     * @param  int  $code
+     * @param  Exception|null  $previous
      */
     public function __construct(Model $social, $message = '', $code = 0, Exception $previous = null)
     {

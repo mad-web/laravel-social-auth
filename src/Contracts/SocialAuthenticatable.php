@@ -16,7 +16,7 @@ interface SocialAuthenticatable
     /**
      * Check social network is attached to user.
      *
-     * @param string $slug
+     * @param  string  $slug
      * @return bool
      */
     public function isAttached(string $slug): bool;
@@ -25,9 +25,9 @@ interface SocialAuthenticatable
      * Attach social network provider to the user.
      *
      * @param $social
-     * @param string $socialId
-     * @param string $token
-     * @param int $expiresIn
+     * @param  string  $socialId
+     * @param  string  $token
+     * @param  int  $expiresIn
      */
     public function attachSocial($social, string $socialId, string $token, int $expiresIn = null);
 
@@ -35,7 +35,7 @@ interface SocialAuthenticatable
      * Provide ability to modify user data
      * received from social network.
      *
-     * @param User $socialUser
+     * @param  User  $socialUser
      * @return array
      */
     public function mapSocialData(User $socialUser);

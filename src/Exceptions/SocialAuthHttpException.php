@@ -15,8 +15,9 @@ class SocialAuthHttpException extends HttpResponseException
 
     /**
      * SocialAuthException constructor.
-     * @param Response $response
-     * @param \Illuminate\Database\Eloquent\Model $social
+     *
+     * @param  Response  $response
+     * @param  \Illuminate\Database\Eloquent\Model  $social
      */
     public function __construct(Response $response, Model $social)
     {

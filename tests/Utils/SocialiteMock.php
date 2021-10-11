@@ -35,6 +35,7 @@ class SocialiteMock
 
     /**
      * SocialiteMock constructor.
+     *
      * @param $app
      * @param $email
      */
@@ -46,9 +47,10 @@ class SocialiteMock
 
     /**
      * Mock the Socialite Factory, so we can hijack the OAuth Request.
-     * @param  string $email
-     * @param  string $token
-     * @param  string $id
+     *
+     * @param  string  $email
+     * @param  string  $token
+     * @param  string  $id
      * @return Mockery\MockInterface
      */
     public function __invoke($email, $token = 'random-token', $id = 'random-id')
@@ -58,8 +60,9 @@ class SocialiteMock
 
     /**
      * Mock the Socialite Factory, so we can hijack the OAuth Request.
-     * @param  string $token
-     * @param  string $id
+     *
+     * @param  string  $token
+     * @param  string  $id
      * @return Mockery\MockInterface
      */
     public function create($token = 'random-token', $id = 'random-id')
@@ -137,7 +140,7 @@ class SocialiteMock
     }
 
     /**
-     * @param string $email
+     * @param  string  $email
      * @return $this
      */
     public function setEmail(string $email)

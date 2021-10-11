@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
  * Class SocialProvider.
  *
  * @property int $id
- * @param string $slug
- * @param string $label
+ *
+ * @param  string  $slug
+ * @param  string  $label
+ *
  * @property string $label
  * @property string $slug
  * @property array $scopes
@@ -19,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $users
+ *
  * @method static \Illuminate\Database\Query\Builder|\MadWeb\SocialAuth\Models\SocialProvider whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\MadWeb\SocialAuth\Models\SocialProvider whereLabel($value)
  * @method static \Illuminate\Database\Query\Builder|\MadWeb\SocialAuth\Models\SocialProvider whereSlug($value)
@@ -51,7 +54,7 @@ class SocialProvider extends Model
     /**
      * SocialProvider constructor.
      *
-     * @param array $attributes
+     * @param  array  $attributes
      */
     public function __construct(array $attributes = [])
     {

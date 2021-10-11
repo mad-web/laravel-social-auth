@@ -28,7 +28,8 @@ class CacheRefreshCommand extends Command
 
     /**
      * CacheRefreshCommand constructor.
-     * @param SocialProvidersLoader $loader
+     *
+     * @param  SocialProvidersLoader  $loader
      */
     public function __construct(SocialProvidersLoader $loader)
     {

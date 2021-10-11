@@ -34,10 +34,10 @@ trait UserSocialite
     /**
      * Attach social network provider to the user.
      *
-     * @param SocialProvider $social
-     * @param string $socialId
-     * @param string $token
-     * @param int $expiresIn
+     * @param  SocialProvider  $social
+     * @param  string  $socialId
+     * @param  string  $token
+     * @param  int  $expiresIn
      */
     public function attachSocial($social, string $socialId, string $token, int $expiresIn = null)
     {
@@ -57,7 +57,7 @@ trait UserSocialite
     }
 
     /**
-     * @param User $socialUser
+     * @param  User  $socialUser
      * @return array
      */
     public function mapSocialData(User $socialUser)

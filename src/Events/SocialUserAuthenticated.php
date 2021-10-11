@@ -13,7 +13,8 @@ class SocialUserAuthenticated extends SocialEvent
 
     /**
      * SocialUserAuthenticated constructor.
-     * @param Authenticatable $user
+     *
+     * @param  Authenticatable  $user
      */
     public function __construct(Authenticatable $user)
     {

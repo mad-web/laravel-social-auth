@@ -18,7 +18,8 @@ class SocialProviderManager
 
     /**
      * SocialProviderManager constructor.
-     * @param SocialProvider $social
+     *
+     * @param  SocialProvider  $social
      */
     public function __construct(SocialProvider $social)
     {
@@ -26,7 +27,7 @@ class SocialProviderManager
     }
 
     /**
-     * @param string $key
+     * @param  string  $key
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function socialUserQuery(string $key)
@@ -37,7 +38,7 @@ class SocialProviderManager
     /**
      * Gets user by unique social identifier.
      *
-     * @param string $key
+     * @param  string  $key
      * @return mixed
      */
     public function getUserByKey(string $key)
@@ -46,8 +47,8 @@ class SocialProviderManager
     }
 
     /**
-     * @param SocialAuthenticatable $user
-     * @param SocialUser $socialUser
+     * @param  SocialAuthenticatable  $user
+     * @param  SocialUser  $socialUser
      */
     public function attach(SocialAuthenticatable $user, SocialUser $socialUser)
     {
@@ -64,9 +65,9 @@ class SocialProviderManager
     /**
      * Create new system user by social user data.
      *
-     * @param Authenticatable $userModel
-     * @param SocialProvider $social
-     * @param SocialUser $socialUser
+     * @param  Authenticatable  $userModel
+     * @param  SocialProvider  $social
+     * @param  SocialUser  $socialUser
      * @return Authenticatable
      */
     public function createNewUser(
