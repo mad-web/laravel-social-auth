@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
+
 # Social Authentication
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
@@ -7,11 +9,11 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-This package give ability to 
- * Sign In 
+This package give ability to
+ * Sign In
  * Sign Up
  * Attach/Detach social network provider to an existing account
- 
+
 This package based on [laravel/socialite](https://laravel.com/docs/5.7/socialite) and provide an easy ability
 of usage a lot of additional providers from [Socialite Providers](https://socialiteproviders.netlify.com/).
 
@@ -40,7 +42,7 @@ $ php artisan vendor:publish --provider="MadWeb\SocialAuth\SocialAuthServiceProv
 
 The package assumes that your users table name is called "users". If this is not the case you should manually edit the published migration to use your custom table name.
 
-After the migration has been published you can create the `social_providers` table for storing supported 
+After the migration has been published you can create the `social_providers` table for storing supported
 providers and `user_has_social_provider` pivot table for attaching providers to users by running migrations:
 
 ```bash
@@ -78,7 +80,7 @@ return [
          * is often just the "SocialProvider" model but you may use whatever you like.
          */
         'social' => \MadWeb\SocialAuth\Models\SocialProvider::class,
-        
+
         /*
          * User model which you will use as "SocialAuthenticatable"
          */
@@ -269,7 +271,7 @@ next, add an event listener from guide to the `social-auth` config file:
 
 ### Routes
 
-If you need do some custom with social flow, you should define yourself controllers and 
+If you need do some custom with social flow, you should define yourself controllers and
 put your custom url into routes file.
 
 For example:
