@@ -23,11 +23,11 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/broadcasting": "^8.0",
-        "illuminate/database": "^8.0",
-        "illuminate/events": "^8.0",
-        "illuminate/routing": "^8.0",
-        "illuminate/support": "^8.0",
+        "illuminate/broadcasting": "^10.0",
+        "illuminate/database": "^10.0",
+        "illuminate/events": "^10.0",
+        "illuminate/routing": "^10.0",
+        "illuminate/support": "^10.0",
         "laravel/ui": "^3.3",
         "socialiteproviders/manager": "^4.0.1",
         "spatie/laravel-package-tools": "^1.9"
