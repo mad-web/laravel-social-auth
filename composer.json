@@ -26,7 +26,7 @@
         "illuminate/broadcasting": "^9.0",
         "illuminate/database": "^9.0",
         "illuminate/events": "^9.0",
-        "illuminate/routing": "^10.0",
+        "illuminate/routing": "^9.0",
         "illuminate/support": "^10.0",
         "laravel/ui": "^3.3",
         "socialiteproviders/manager": "^4.0.1",
